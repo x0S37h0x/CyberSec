@@ -1,0 +1,28 @@
+{{!< default}}
+
+ {{!-- Headers --}}
+
+
+ <main id="site-main" class="site-main outer">
+    <div class="inner" style="display: grid;grid-template-columns: 1fr 0px;">
+        <div class="post-feed">
+            {{#foreach posts}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+        {{!! Sidebar }}
+
+     <div class="">
+         {{> "sidebar"}}
+
+        </div>
+    {{!! Ende Sidebar }}
+    </div>
+    <div class ="post-feed">
+      {{!! After all the posts, we have the previous/next pagination links }}
+    {{pagination}}
+    </div>
+</main>
